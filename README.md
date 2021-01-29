@@ -20,9 +20,12 @@ The impact of this application is providing an accessible way to share education
 *	YouTube is open to anyone who uses Internet. However, it takes time and effort to find some valuable resources. We would like to connect good feedback with seekers of educational opportunities.
 
 ## What
-The one of constraints for this application is the motivation for the community to provide feedback. 
+The one of constraints for this application is the motivation for the community to provide feedback.
+
 In addition to that, when it comes to deployment of the application, there exists another obstacle, such as getting domain name, web hosting and database hosting, etc. Because they require financial support as well. 
+
 Another constrains are deciding which stacks will be used for implementing the application, like deciding between native JavaScript and frameworks, or between Relational database or No SQL database, etc. 
+
 The constraints obviously need to be having rationale reasonings for deciding which stacks or financial support would be for the project. 
 
 
