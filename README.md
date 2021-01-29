@@ -1,5 +1,5 @@
 # ENSE-405-Project
-University of Regina Software Systems Engineering class(ENST 405) Project: Designing Apps for Learning &amp; Collaboration.
+University of Regina Software Systems Engineering class(ENSE 405) Project: Designing Apps for Learning &amp; Collaboration.
 
 
 ## Project idea/background & business need/opportunity
