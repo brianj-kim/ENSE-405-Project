@@ -3,7 +3,11 @@ University of Regina Software Systems Engineering class(ENST 405) Project: Desig
 
 
 ## Project idea/background & business need/opportunity
-Why don’t we have some way to find the best tutorials and DIYs on YouTube? There are too many videos on YouTube. When someone searches for what they want to watch to learn, they could be overwhelmed by the large volume of results. Our idea starts here. What if a community of members could rank, review, or recommend of a tutorial video on YouTube, like the retweet functionality on the Twitter app. This application could help someone who is seeking a higher quality education resource on YouTube.
+Why don’t we have some way to find the best tutorials and DIYs on YouTube? 
+
+There are too many videos on YouTube. When someone searches for what they want to watch to learn, they could be overwhelmed by the large volume of results. Our idea starts here. What if a community of members could rank, review, or recommend of a tutorial video on YouTube, like the retweet functionality on the Twitter app. 
+
+This application could help someone who is seeking a higher quality education resource on YouTube.
 
 ## Reason
 On YouTube, there are a bunch of tutorials about many different subjects. This might be frustrating to someone searching a video clip for a specific subject. Our project aims:
