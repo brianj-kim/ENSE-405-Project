@@ -32,4 +32,5 @@ Another constrains are deciding which stacks will be used for implementing the a
 
 The constraints obviously need to be having rationale reasonings for deciding which stacks or financial support would be for the project. 
 
-
+## License
+Creative Commons Share &amp; Share Alike (CC BY-SA 4.0)
