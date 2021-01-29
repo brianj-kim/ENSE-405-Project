@@ -28,7 +28,7 @@ The most concerned constraint for this project is the motivation for the communi
 
 In addition to that, when it comes to deployment of the application, there exists another obstacle, such as getting domain name, web hosting and database hosting, etc. Because they require financial support as well. 
 
-Another constrains are deciding which stacks will be used for implementing the application, like deciding between native JavaScript and frameworks, or between Relational database or No SQL database, etc. 
+Another constraints are deciding which technical stacks will be used for implementing the application, like deciding between native JavaScript and frameworks, or between Relational database or No SQL database, etc. 
 
 Those constraints obviously could to be resolved for having rationales of decision making for the project. 
 
