@@ -11,7 +11,7 @@ export default function useUser() {
       // we need a function that we can call (firebase service) that gets the user data based on the id
       const response = await getUserByUserId(user.uid);
       // console.log(response[0]);
-      setActiveUser(response);
+      setActiveUser(response[0]);
     }
 
     if (user?.uid) {

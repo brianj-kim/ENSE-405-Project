@@ -18,7 +18,7 @@ export default function Post({ content }) {
     }
   };
 
-  return <div className="rounded col-span-4 border bg-white border-gray-primary mb-16">
+  return <div className="rounded col-span-4 border bg-white border-gray-primary mb-9">
           <Header username={content.username} />
           <Video src={retrieveVideoId(content.videoSrc)} description={content.description} />
         </div>;
