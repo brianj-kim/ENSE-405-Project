@@ -17,11 +17,11 @@ export default function Header() {
         <div className="flex justify-between h-full">
           <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
             <h1 className="flex justify-center w-full">
-              <Link to={ROUTES.DASHBOARD} aria-label="Instagram logo">
+              <Link to={ROUTES.DASHBOARD} aria-label="Youniveersity logo">
                 <img
-                  src="/images/youniversity_small_logo.png"
-                  alt="Instagram"
-                  className="mt-2 w-6/12"
+                  src="/images/youniversity-main-logo.png"
+                  alt="Youniversity main logo"
+                  className="w-1/5"
                 />
               </Link>
             </h1>
@@ -42,6 +42,23 @@ export default function Header() {
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                </Link>
+
+                <Link to={ROUTES.WRITE} aria-label="Write">
+                  <svg 
+                    className="w-8 mr-6 text-black-light cursor-pointer" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      stroke-width={2}
+                      d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" 
                     />
                   </svg>
                 </Link>

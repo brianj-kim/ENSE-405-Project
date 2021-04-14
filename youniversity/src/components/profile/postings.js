@@ -7,11 +7,10 @@ export default function Postings({ postings }) {
     const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
     const match = url.match(regExp);
 
-    if (match && match[7].length == 11) {
+    if (match && match[7].length === 11) {
       return "https://www.youtube.com/embed/" + match[7];
     } else {
       return "https://www.youtube.com/embed/";
-      console.log("could not retrieve video ID");
     }
   };
 
@@ -26,7 +25,7 @@ export default function Postings({ postings }) {
           postings.map((posting) => (
             <div key={posting.docId} className="rounded col-span-4 border bg-white border-gray-primary mb-9">
               <div className="flex flex-col">
-                <div className="flex justify-center py-4"><iframe width="800" height="450" src={retrieveVideoId(posting.videoSrc)} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                <div className="flex justify-center py-4"><iframe width="800" height="450" src={retrieveVideoId(posting.videoSrc)} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
                 <div className="flex justify-center pb-5">            
                   <p>{posting.description}</p>
                 </div>

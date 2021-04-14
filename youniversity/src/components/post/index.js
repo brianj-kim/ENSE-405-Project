@@ -2,25 +2,51 @@ import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import Header from './header';
 import Video from './video';
-  
+import Actions from './actions';
+import Comments from './comments';  
 
 export default function Post({ content }) {
+  const commentInput = useRef(null);
+  const handleFocus = () => commentInput.current.focus();
+
   // heaer, vide, actions (like comment icon, footer , comment) 
-  const retrieveVideoId = (url) => {
+  const getVideoId = (url) => {
     const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
     const match = url.match(regExp);
 
-    if (match && match[7].length == 11) {
-      return "https://www.youtube.com/embed/" + match[7];
+    if(match && match[7].length === 11) {
+      return match[7];
+    } else {
+      return null;
+    }
+  }
+
+  const retrieveVideoSrc = (url) => {
+    const videoId = getVideoId(url);
+
+    if (videoId != null) {
+      return "https://www.youtube.com/embed/" + videoId;
     } else {
       return "https://www.youtube.com/embed/";
-      console.log("could not retrieve video ID");
     }
   };
-
+  console.log(content)
   return <div className="rounded col-span-4 border bg-white border-gray-primary mb-9">
           <Header username={content.username} />
-          <Video src={retrieveVideoId(content.videoSrc)} description={content.description} />
+          <Video src={retrieveVideoSrc(content.videoSrc)} description={content.description} />
+          <Actions 
+            docId={content.docId}
+            totalLikes={content.likes.length}
+            likedPosting={content.userLikedPosting}
+            handleFocus={handleFocus}
+          />
+          <Comments
+            docId={content.docId}
+            comments={content.comments}
+            posted={content.dateCreated}
+            commentInput={commentInput}
+          />
+
         </div>;
 
 }

@@ -5,19 +5,7 @@ import Post from './post';
 export default function Timeline() {
   const { postings } = usePostings();
 
-  const retrieveVideoId = (url) => {
-    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
-    const match = url.match(regExp);
-
-    if (match && match[7].length == 11) {
-      return "https://www.youtube.com/embed/" + match[7];
-    } else {
-      return "https://www.youtube.com/embed/";
-      console.log("could not retrieve video ID");
-    }
-  };
-
-  console.log('postings', postings);
+  // console.log('postings', postings);
 
   return (
     <div className="container">

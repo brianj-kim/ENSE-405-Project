@@ -9,10 +9,10 @@ module.exports = {
     colors: {
       white: '#ffffff',
       blue: {
-        medium: '#005c98'
+        medium: '#ea3323'
       },
       black: {
-        light: '#005c98',
+        light: '#ea3323',
         faded: '#00000059'
       },
       gray: {

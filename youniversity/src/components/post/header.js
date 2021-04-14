@@ -7,9 +7,8 @@ export default function Header({ username }) {
     <div className="flex border-b border-gray-primary h4 p-4 py-2.5">
       <div className="flex items-center">
         <Link to={`/p/${username}`} className="flex items-center">
-          <p className="font-bold">{username}</p>
+          <p className="font-bold">{username}</p>          
         </Link>
-
       </div>
     </div>
   )
