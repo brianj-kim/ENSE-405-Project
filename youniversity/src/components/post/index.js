@@ -32,7 +32,7 @@ export default function Post({ content }) {
   };
   console.log(content)
   return <div className="rounded col-span-4 border bg-white border-gray-primary mb-9">
-          <Header username={content.username} />
+          <Header username={content.username} posted={content.dateCreated}/>
           <Video src={retrieveVideoSrc(content.videoSrc)} description={content.description} />
           <Actions 
             docId={content.docId}
@@ -43,7 +43,6 @@ export default function Post({ content }) {
           <Comments
             docId={content.docId}
             comments={content.comments}
-            posted={content.dateCreated}
             commentInput={commentInput}
           />
 

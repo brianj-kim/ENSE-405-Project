@@ -33,11 +33,11 @@ export default function Login() {
   return (
     <div className="container flex mx-auto max-w-screen-md items-center h-screen">
       <div className="flex w-2/5 mr-10">
-        <img src="/images/youniversity-main-logo.png" alt="Youniversity Logo" />
+        <img src="/images/youniversity-main-logo.png" width="300" height="120" alt="Youniversity Logo" />
       </div>
       <div className="flex flex-col w-2/5">
         <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center">
           <img src="/images/youniversity-smaill-title.png" alt="Youniversity small title" />
           </div>
 
