@@ -107,6 +107,36 @@ export async function getPostings(userId, following) {
   return postingsWithUserDetails;
 }
 
+export async function getAllPostings(userId){
+  const result = await firebase 
+    .firestore()
+    .collection('posting')
+    .get();
+
+    const userPostings = result.docs.map((posting) => ({
+        ...posting.data(),
+        docId: posting.id
+    }));
+
+    const postingsWithUserDetails = await Promise.all(
+      userPostings.map(async (posting) => {
+        let userLikedPosting = false;
+        if (posting.likes.includes(userId)) {
+          userLikedPosting = true;
+        }
+
+        const user = await getUserByUserId(posting.userId);
+        const { username } = user[0];
+
+        return { username, ...posting, userLikedPosting }
+
+        
+      })
+    );
+
+    return postingsWithUserDetails;
+}
+
 export async function getUserPostingsByUsername(username) {
   const [user] = await getUserByUsername(username);
   const result = await firebase

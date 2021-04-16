@@ -20,7 +20,7 @@ export default function Profile({ user }) {
   useEffect(() => {
     async function getProfileInfoAndPostings() {
       const postings = await getUserPostingsByUsername(user.username);
-      dispatch({ profile: user, postingsCollection: postings, followerCount: user.followers.length });
+      dispatch({ profile: user, postingsCollection: postings, followerCount: user.followers?.length });
     }
     getProfileInfoAndPostings();
   }, [user.username]);
