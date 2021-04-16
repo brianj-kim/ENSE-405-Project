@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import UserContext from '../context/user';
-import { getPostings, getUserByUserId } from '../services/firebase';
+import { getPostings, getAllPostings, getUserByUserId } from '../services/firebase';
 
 export default function usePostings() {
   const [postings, setPostings] = useState(null);
@@ -10,6 +10,7 @@ export default function usePostings() {
 
   useEffect(() => {
     async function getTimelinePostings() {
+      /*
       const [{ following }] = await getUserByUserId(userId);
       let followedUserPostings = [];
       
@@ -19,6 +20,13 @@ export default function usePostings() {
 
       followedUserPostings.sort((a, b) => b.dateCreated - a.dateCreated);
       setPostings(followedUserPostings);
+      */
+
+      let getAllPosts = [];
+      getAllPosts = await getAllPostings(userId);
+      getAllPosts.sort((a, b) => b.dateCreated - a.dateCreated);
+      setPostings(getAllPosts);
+
     }
 
     getTimelinePostings()
